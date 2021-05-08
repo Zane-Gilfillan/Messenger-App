@@ -23,8 +23,9 @@ app.use(require('./controllers'));
 //sockit.io start
 
 app.get('/', (req, res) => {
-  // res.sendFile(__dirname + '/test/index.html');
+
   res.render("index.handlebars")
+
 });
 
 io.on('connection', (socket) => {
@@ -47,12 +48,12 @@ io.on('connection', (socket) => {
 
 // I switched out the server call to connect to the socket.io client. keeping the below code around juuuust incase it causes an issue. which is most certainly will.
 
-// sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: false }).then(() => {
 
-//   app.listen(PORT, () => console.log('listening on ' + PORT));
+   app.listen(PORT, () => console.log('listening on ' + PORT));
   
-// });
-
-server.listen(3001, () => {
-  console.log('listening on *:3001');
 });
+
+// server.listen(PORT, () => {
+//   console.log('listening on *:3001');
+// });

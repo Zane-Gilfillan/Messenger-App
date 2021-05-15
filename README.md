@@ -1,4 +1,4 @@
-# study room | a place to learn
+# study room  |  a place to learn
 
 ## Table of Contents
 - [Description](#description)
